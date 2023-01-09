@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import { Box } from '@chakra-ui/react';
+
+import HeroSection from './components/HeroSection';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <Navbar />
+      <Box
+        bgImage={'/assets/bg.png'}
+        bgRepeat='no-repeat'
+        bgSize='cover'
+        bgPosition='center'
+        h='100vh'
+      >
+        <Box
+          pt={{base: '1.5rem', lg: '2.5rem'}}
+          bgColor={'rgba(193,0,0, 0.8)'}
+          w='100%'
+          h='100%'
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <HeroSection />
+        </Box>
+      </Box>
+    </>
   );
 }
 
