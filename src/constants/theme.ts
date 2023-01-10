@@ -7,6 +7,8 @@ const colors = {
     white: '#FFFFFF',
     white2: '#FFFCFC',
     secondaryGrey1: '#232323',
+    secondaryGrey2: '#5E5B5B',
+    lightGrey: '#D9D9D9',
     mixedBase: 'linear-gradient(144.09deg, #C10000 12.14%, #6E93F1 89.06%)',
   },
 };

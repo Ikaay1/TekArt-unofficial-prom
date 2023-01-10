@@ -7,3 +7,21 @@
   margin: 0;
   padding: 0;
 }
+
+.ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .ball {
+    width: 10px;
+    height: 10px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
