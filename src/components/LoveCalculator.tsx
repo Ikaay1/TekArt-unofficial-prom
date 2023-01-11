@@ -12,6 +12,8 @@ import {
 	Text,
 } from '@chakra-ui/react';
 
+import { loveQuotesData, nominateData } from '../constants/data';
+
 const LoveCalculator = () => {
   return (
     <Box pt='6.37rem' pb={{base: '3rem', lg: '4rem'}}>
@@ -26,10 +28,12 @@ const LoveCalculator = () => {
         color='#FFFFFF'
         mb='1.45rem'
         display={{lg: 'none'}}
+        mx={{base: '.7rem', lg: '7rem'}}
       >
         LOVE CALCULATOR
       </Text>
       <Box
+        mx={{base: '.7rem', lg: '7rem'}}
         pl={{base: '2.2rem', lg: '12rem'}}
         pt={{base: '3.4rem', lg: '1rem'}}
         pr={{base: '1.4rem', lg: '5rem'}}
@@ -164,50 +168,67 @@ const LoveCalculator = () => {
         />
       </Box>
       <Box
-        mx={{base: '2rem', lg: '3.2rem'}}
+        // mx={{base: '2rem', lg: '3.2rem'}}
         mt={{base: '1.2rem', lg: '13.5rem'}}
+        overflowX={'hidden'}
       >
-        <Flex justifyContent={'space-between'} alignItems='center'>
-          <Text
-            fontFamily='Public Sans'
-            fontStyle='normal'
-            fontWeight='900'
-            fontSize={{base: '15px', lg: '32px'}}
-            lineHeight='145.14%'
-            color='tekArt.white'
-          >
-            &lt;
-          </Text>
-          <Text
-            width={{base: '295px', lg: '901px'}}
-            fontFamily='Playfair Display'
-            fontStyle='normal'
-            fontWeight='500'
-            fontSize={{base: '10px', lg: '32px'}}
-            lineHeight='145.14%'
-            color='tekArt.white'
-            textAlign={'center'}
-          >
-            ”I fell in love with her courage, her sincerity, and her flaming
-            self respect. And it’s these things I’d believe in, even if the
-            whole world indulged in wild suspicions that she wasn’t all she
-            should be. I love her and it is the beginning of everything.”
-            <Text fontWeight={{base: '900', lg: '500'}} mt='.4rem'>
-              – F. Scott Fitzgerald
-            </Text>
-          </Text>
-          <Text
-            fontFamily='Public Sans'
-            fontStyle='normal'
-            fontWeight='900'
-            fontSize={{base: '15px', lg: '32px'}}
-            lineHeight='145.14%'
-            color='tekArt.white'
-          >
-            &gt;
-          </Text>
+        <Flex
+          flexWrap={'nowrap'}
+          className='track2'
+          width={{base: '1180px', lg: '3604px'}}
+        >
+          {loveQuotesData.map(({quote, author}) => (
+            <Flex
+              justifyContent={'space-between'}
+              alignItems='center'
+              mr={{base: '1.5rem', lg: '2.5rem'}}
+              flexShrink={0}
+            >
+              <Text
+                fontFamily='Public Sans'
+                fontStyle='normal'
+                fontWeight='900'
+                fontSize={{base: '15px', lg: '32px'}}
+                lineHeight='145.14%'
+                color='tekArt.white'
+              >
+                &lt;
+              </Text>
+              <Text
+                width={{base: '295px', lg: '901px'}}
+                fontFamily='Playfair Display'
+                fontStyle='normal'
+                fontWeight='500'
+                fontSize={{base: '10px', lg: '32px'}}
+                lineHeight='145.14%'
+                color='tekArt.white'
+                textAlign={'center'}
+                mx='.5rem'
+              >
+                ”{quote}”
+                <Text fontWeight={{base: '900', lg: '500'}} mt='.4rem'>
+                  – {author}
+                </Text>
+              </Text>
+              <Text
+                fontFamily='Public Sans'
+                fontStyle='normal'
+                fontWeight='900'
+                fontSize={{base: '15px', lg: '32px'}}
+                lineHeight='145.14%'
+                color='tekArt.white'
+              >
+                &gt;
+              </Text>
+            </Flex>
+          ))}
         </Flex>
-        <Flex justifyContent={'center'} mt='1.4rem'>
+
+        <Flex
+          justifyContent={'center'}
+          mt='1.4rem'
+          mx={{base: '2rem', lg: '3.2rem'}}
+        >
           <Button
             boxSizing='border-box'
             width={{base: '126px', lg: '293px'}}
@@ -235,7 +256,7 @@ const LoveCalculator = () => {
         flexDirection={{base: 'column', lg: 'row'}}
         alignItems={{base: 'center'}}
         justifyContent={{lg: 'space-between'}}
-        mx={{base: '3rem', lg: 0}}
+        mx={{base: '3.7rem', lg: '6rem'}}
         mt={{base: '.2rem', lg: '2.2rem'}}
       >
         {nominateData.map(({image, text}, i) => (
@@ -256,7 +277,7 @@ const LoveCalculator = () => {
             <Image
               src={`/assets/${image}Desktop.png`}
               display={{base: 'none', lg: 'block'}}
-              mb={i === 2 ? '36.05px' : 0}
+              mb={i === 2 ? '52.5px' : 0}
             />
             <Text
               width={{base: '149px', lg: i === 2 ? '277px' : '262.12px'}}
@@ -285,11 +306,5 @@ const LoveCalculator = () => {
     </Box>
   );
 };
-
-const nominateData = [
-  {image: 'queen', text: 'Prom Queen'},
-  {image: 'king', text: 'Prom King'},
-  {image: 'superstar', text: 'Prom SuperStar'},
-];
 
 export default LoveCalculator;

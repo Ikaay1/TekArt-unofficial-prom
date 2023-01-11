@@ -49,7 +49,13 @@ const HeroSection = () => {
             color='tekArt.base'
             mr={{lg: '1rem'}}
           >
-            Get Ticket
+            <a
+              href='https://eventprime.co/e/unofficial-prom'
+              target={'_blank'}
+              rel='noreferrer'
+            >
+              Get Ticket
+            </a>
           </Button>
           <Button
             background='transparent'

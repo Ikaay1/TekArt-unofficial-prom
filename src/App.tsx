@@ -37,11 +37,7 @@ function App() {
         >
           <Ticket />
         </Box>
-        <Box
-          px={{base: '.7rem', lg: '7rem'}}
-          bgColor={'rgba(193,0,0, 0.8)'}
-          w='100%'
-        >
+        <Box bgColor={'rgba(193,0,0, 0.8)'} w='100%'>
           <LoveCalculator />
         </Box>
         <Box

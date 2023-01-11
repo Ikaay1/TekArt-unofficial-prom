@@ -80,6 +80,23 @@ const Footer = () => {
           </>
         ))}
       </Flex>
+      <Text
+        fontFamily='Public Sans'
+        fontStyle='normal'
+        fontWeight='700'
+        fontSize={{base: '11px', lg: '21px'}}
+        lineHeight='98.64%'
+        color='tekArt.black'
+        textAlign={'center'}
+        mt={{base: '.6rem', lg: '2.1rem'}}
+      >
+        Developed by{' '}
+        <Box as='span' fontWeight='800' color='tekArt.red'>
+          <a href='https://ikechi.com.ng' target='_blank' rel='noreferrer'>
+            Ikechukwu
+          </a>
+        </Box>
+      </Text>
     </Box>
   );
 };

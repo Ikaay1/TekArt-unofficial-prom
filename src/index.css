@@ -25,11 +25,20 @@ a {
   /* position: absolute; */
   white-space: nowrap;
   will-change: transform;
-  animation: marquee 25s linear infinite;
+  animation: marquee 23s linear infinite;
   width: 180%;
 }
 
-.track:hover {
+.track2 {
+  /* position: absolute; */
+  /* white-space: nowrap;
+  will-change: transform; */
+  animation: marquee 28s linear infinite;
+  /* width: 180%; */
+}
+
+.track:hover,
+.track2:hover {
   animation-play-state: paused;
 }
 
