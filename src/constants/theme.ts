@@ -5,6 +5,7 @@ const colors = {
   tekArt: {
     base: '#C10000',
     white: '#FFFFFF',
+    black: '#000000',
     white2: '#FFFCFC',
     secondaryGrey1: '#232323',
     secondaryGrey2: '#5E5B5B',

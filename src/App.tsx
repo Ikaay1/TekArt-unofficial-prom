@@ -3,6 +3,7 @@ import React from 'react';
 import { Box } from '@chakra-ui/react';
 
 import HeroSection from './components/HeroSection';
+import LoveCalculator from './components/LoveCalculator';
 import Navbar from './components/Navbar';
 import Styles from './components/Styles';
 import Ticket from './components/Ticket';
@@ -34,6 +35,13 @@ function App() {
           w='100%'
         >
           <Ticket />
+        </Box>
+        <Box
+          px={{base: '.7rem', lg: '7rem'}}
+          bgColor={'rgba(193,0,0, 0.8)'}
+          w='100%'
+        >
+          <LoveCalculator />
         </Box>
       </Box>
     </>
