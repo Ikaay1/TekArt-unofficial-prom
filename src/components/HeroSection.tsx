@@ -74,19 +74,21 @@ const HeroSection = () => {
           h={{base: '415px', lg: '545px'}}
           ml={{base: '-65px', lg: 0}}
           // border='1px solid blue'
+          objectFit={'cover'}
           src='/assets/girl.png'
         />
         <Image
           w={{base: '255px', lg: '365px'}}
-          h={{base: '535px', lg: '580px'}}
+          h={{base: '535px', lg: '680px'}}
           ml={{base: '-130px', lg: '-180px'}}
           // border='1px solid blue'
+          objectFit={'cover'}
           src='/assets/boy.png'
         />
       </Flex>
       <Image
         position={'absolute'}
-        bottom='-24%'
+        bottom='-19.5%'
         left='0'
         w='100%'
         src='/assets/aboutMobile.png'
@@ -95,7 +97,7 @@ const HeroSection = () => {
       />
       <Image
         position={'absolute'}
-        bottom='-73%'
+        bottom='-56.5%'
         left='0'
         w='100%'
         h='600px'
