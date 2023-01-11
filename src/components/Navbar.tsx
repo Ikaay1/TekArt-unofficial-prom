@@ -4,8 +4,9 @@ import { Box, Text } from '@chakra-ui/react';
 
 const Navbar = () => {
   return (
-    <Box>
+    <Box overflowX={'hidden'}>
       <Text
+        className='track'
         fontFamily='Public Sans'
         fontStyle='normal'
         fontWeight={500}

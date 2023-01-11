@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Box } from '@chakra-ui/react';
 
+import Footer from './components/Footer';
 import HeroSection from './components/HeroSection';
 import LoveCalculator from './components/LoveCalculator';
 import Navbar from './components/Navbar';
@@ -42,6 +43,15 @@ function App() {
           w='100%'
         >
           <LoveCalculator />
+        </Box>
+        <Box
+          py={{base: '.5rem', lg: '.5rem'}}
+          pb={{base: '1.5rem', lg: '4rem'}}
+          px={{base: '1.2rem', lg: '2.3rem'}}
+          bgColor={'rgb(255,249,249, 0.98)'}
+          w='100%'
+        >
+          <Footer />
         </Box>
       </Box>
     </>

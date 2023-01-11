@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
 
 import { imageUrls, timeData } from '../constants/data';
 
+// 2023-02-18T14:00:00+01:00
 const Styles = () => {
+  const calculateTimeLeft = () => {
+    const difference = +new Date('2023-02-18T14:00:00+01:00') - +new Date();
+    let timeLeft = {};
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60) / 24),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState<any>(calculateTimeLeft());
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+  });
+
   return (
     <Box>
       <Box
@@ -125,7 +149,13 @@ const Styles = () => {
                 lineHeight={{lg: '98.64%'}}
                 color='tekArt.secondaryGrey2'
               >
-                {eachData.time}
+                {i === 0
+                  ? timeLeft?.days
+                  : i === 1
+                  ? timeLeft.hours
+                  : i === 2
+                  ? timeLeft.minutes
+                  : timeLeft.seconds}
               </Text>
               <Text
                 fontFamily='Public Sans'

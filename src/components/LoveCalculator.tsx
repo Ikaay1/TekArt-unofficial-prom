@@ -221,7 +221,13 @@ const LoveCalculator = () => {
             fontWeight='500'
             fontFamily='Public Sans'
           >
-            GET TICKETS
+            <a
+              href='https://eventprime.co/e/unofficial-prom'
+              target={'_blank'}
+              rel='noreferrer'
+            >
+              GET TICKETS
+            </a>
           </Button>
         </Flex>
       </Box>
