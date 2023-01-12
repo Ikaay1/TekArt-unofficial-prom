@@ -106,7 +106,17 @@ const Footer = () => {
         textAlign={'center'}
         mt={{base: '.6rem', lg: '2.1rem'}}
       >
-        Developed by{' '}
+        Designed by{' '}
+        <Box as='span' fontWeight='800' color='tekArt.red'>
+          <a
+            href='https://behance.net/thepsam'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Psam
+          </a>
+        </Box>
+        . Developed by{' '}
         <Box as='span' fontWeight='800' color='tekArt.red'>
           <a href='https://ikechi.com.ng' target='_blank' rel='noreferrer'>
             Ikechukwu
