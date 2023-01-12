@@ -35,3 +35,26 @@ export const loveQuotesData = [
     author: 'Angelita Lim',
   },
 ];
+
+export const ticketsData = [
+  {
+    price: 'N4K',
+    title: 'SINGLE FRECUENTE',
+    package: 'Event Access,Small Chops,Drinks',
+  },
+  {
+    price: 'N6.5K',
+    title: 'SINGLE CALIDAD',
+    package: 'Event Access,Small Chops,Drinks,Food',
+  },
+  {
+    price: 'N7.9K',
+    title: 'COUPLE FRECUENTE (2)',
+    package: 'Event Access,Small Chops,Drinks',
+  },
+  {
+    price: '13K',
+    title: 'COUPLE CALIDAD',
+    package: 'Event Access,Small Chops,Drinks,Food,Sovenior',
+  },
+];

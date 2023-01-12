@@ -5,6 +5,7 @@ const colors = {
   tekArt: {
     base: '#C10000',
     red: '#980000',
+    orange: '#FE9D18',
     white: '#FFFFFF',
     black: '#000000',
     black2: '#464646',
@@ -12,6 +13,7 @@ const colors = {
     secondaryGrey1: '#232323',
     secondaryGrey2: '#5E5B5B',
     lightGrey: '#D9D9D9',
+    modalOverlay: 'rgba(0, 0, 0, 0.8)',
     mixedBase: 'linear-gradient(144.09deg, #C10000 12.14%, #6E93F1 89.06%)',
   },
 };

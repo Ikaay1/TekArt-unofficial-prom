@@ -42,6 +42,7 @@ const Styles = () => {
           flexDirection='column'
           justifyContent={'center'}
           textAlign={'center'}
+          id='styles'
         >
           <Text
             fontFamily='Playfair Display'

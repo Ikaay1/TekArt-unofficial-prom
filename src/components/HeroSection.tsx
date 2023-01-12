@@ -36,42 +36,44 @@ const HeroSection = () => {
           ml={{base: '2.3rem', lg: '2.7rem'}}
           mt={{base: '1.3rem', lg: '2rem'}}
         >
-          <Button
-            background='tekArt.white2'
-            width={{base: '141px', lg: '242px'}}
-            height={{base: '36px', lg: '63px'}}
-            display='flex'
-            justifyContent={'center'}
-            alignItems='center'
-            borderRadius={{base: '6px', lg: '19px'}}
-            fontSize={{lg: '36px'}}
-            fontFamily={'Public Sans'}
-            color='tekArt.base'
-            mr={{lg: '1rem'}}
+          <a
+            href='https://eventprime.co/e/unofficial-prom'
+            target={'_blank'}
+            rel='noreferrer'
           >
-            <a
-              href='https://eventprime.co/e/unofficial-prom'
-              target={'_blank'}
-              rel='noreferrer'
+            <Button
+              background='tekArt.white2'
+              width={{base: '141px', lg: '242px'}}
+              height={{base: '36px', lg: '63px'}}
+              display='flex'
+              justifyContent={'center'}
+              alignItems='center'
+              borderRadius={{base: '6px', lg: '19px'}}
+              fontSize={{lg: '36px'}}
+              fontFamily={'Public Sans'}
+              color='tekArt.base'
+              mr={{lg: '1rem'}}
             >
               Get Ticket
-            </a>
-          </Button>
-          <Button
-            background='transparent'
-            width={{lg: '242px'}}
-            height={{lg: '63px'}}
-            justifyContent={'center'}
-            alignItems='center'
-            borderRadius='19px'
-            fontSize={{lg: '36px'}}
-            fontFamily={'Public Sans'}
-            color='tekArt.white'
-            border='1px solid white'
-            display={{base: 'none', lg: 'flex'}}
-          >
-            Learn More
-          </Button>
+            </Button>
+          </a>
+          <a href='#styles'>
+            <Button
+              background='transparent'
+              width={{lg: '242px'}}
+              height={{lg: '63px'}}
+              justifyContent={'center'}
+              alignItems='center'
+              borderRadius='19px'
+              fontSize={{lg: '36px'}}
+              fontFamily={'Public Sans'}
+              color='tekArt.white'
+              border='1px solid white'
+              display={{base: 'none', lg: 'flex'}}
+            >
+              Learn More
+            </Button>
+          </a>
         </Flex>
       </Box>
       <Flex mt={{base: '1.5rem', lg: 0}}>

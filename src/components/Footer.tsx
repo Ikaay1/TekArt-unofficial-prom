@@ -51,11 +51,15 @@ const Footer = () => {
         textAlign={'center'}
         mt={{base: '.6rem', lg: '3.1rem'}}
       >
-        Become a sponsor{' '}
+        <a href='https://tally.so/r/n9NyOY' target='_blank' rel='noreferrer'>
+          Become a sponsor{' '}
+        </a>
         <Box as='span' mx={{base: '1rem', lg: '5rem'}}>
           |
         </Box>{' '}
-        Contact Us
+        <a href='https://tally.so/r/me5lLO' target='_blank' rel='noreferrer'>
+          Contact Us
+        </a>
       </Text>
       <Divider
         my={{base: '1rem', lg: '3rem'}}
@@ -70,14 +74,26 @@ const Footer = () => {
         mx='auto'
         justifyContent={'space-between'}
       >
-        {['facebook', 'twitter', 'linkedIn', 'instagram'].map((item) => (
-          <>
+        {['facebook', 'twitter', 'linkedIn', 'instagram'].map((item, i) => (
+          <a
+            href={
+              i === 0
+                ? 'https://www.facebook.com/digiupnigeria?mibextid=LQQJ4d'
+                : i === 1
+                ? 'https://www.twitter.com/tekartbydigiup'
+                : i === 2
+                ? 'https://www.linkedin.com/events/unofficialprom7019056682269876224/'
+                : 'https://www.instagram.com/tekartcon'
+            }
+            target={'_blank'}
+            rel='noreferrer'
+          >
             <Image src={`/assets/${item}Mobile.png`} display={{lg: 'none'}} />
             <Image
               src={`/assets/${item}.png`}
               display={{base: 'none', lg: 'block'}}
             />
-          </>
+          </a>
         ))}
       </Flex>
       <Text

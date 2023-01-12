@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
 	Box,
@@ -6,15 +6,57 @@ import {
 	Flex,
 	Image,
 	Input,
+	Modal,
+	ModalContent,
+	ModalOverlay,
 	Radio,
 	RadioGroup,
 	Stack,
 	Text,
+	useDisclosure,
+	useToast,
 } from '@chakra-ui/react';
 
 import { loveQuotesData, nominateData } from '../constants/data';
+import Score from './Score';
 
 const LoveCalculator = () => {
+  const {isOpen, onOpen, onClose} = useDisclosure();
+  const [name1, setName1] = useState('');
+  const [name2, setName2] = useState('');
+  const [random, setRandom] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const toast = useToast();
+
+  const handleOkay = () => {
+    setName1('');
+    setName2('');
+    onClose();
+  };
+
+  const handlePickRandom = () => {
+    if (name1 && name2) {
+      setLoading(true);
+      const rand = Math.random() * 100;
+      console.log(rand); // say 99.81321410836433
+
+      setRandom(Math.floor(rand));
+      setTimeout(() => {
+        setLoading(false);
+        onOpen();
+      }, 1500);
+    } else {
+      toast({
+        title: 'Invalid Input',
+        description: 'Please fill in the two input fields',
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+        position: 'top-right',
+      });
+    }
+  };
+
   return (
     <Box pt='6.37rem' pb={{base: '3rem', lg: '4rem'}}>
       <Text
@@ -56,7 +98,7 @@ const LoveCalculator = () => {
         >
           LOVE CALCULATOR
         </Text>
-        {['YOUR NAME', 'PARENTS NAME'].map((item, i) => (
+        {['YOUR NAME', 'Partner’s Name'].map((item, i) => (
           <Flex mt='.4rem' justifyContent={'space-between'}>
             <Text
               fontFamily='Public Sans'
@@ -87,9 +129,18 @@ const LoveCalculator = () => {
                 h={{base: '38px', lg: '53px'}}
                 backgroundColor={'tekArt.white'}
                 borderRadius='5px'
+                value={i === 0 ? name1 : name2}
+                onChange={
+                  i === 0
+                    ? (e) => setName1(e.target.value)
+                    : (e) => setName2(e.target.value)
+                }
               />
               {/* <Box mr='1rem'> */}
-              <RadioGroup mt={{base: '.2rem', lg: '.6rem'}} defaultValue='1'>
+              <RadioGroup
+                mt={{base: '.2rem', lg: '.6rem'}}
+                defaultValue={i === 0 ? '1' : '2'}
+              >
                 <Stack spacing={5} direction='row'>
                   <Radio mr={{base: '.5rem', lg: '0.95rem'}} value='1'>
                     <Box
@@ -130,7 +181,11 @@ const LoveCalculator = () => {
                     color={'tekArt.white'}
                     lineHeight='162.14%'
                     bg='tekArt.base'
-                    display={{lg: 'none'}}
+                    display={{base: 'flex', lg: 'none'}}
+                    alignItems='center'
+                    justifyContent='center'
+                    onClick={handlePickRandom}
+                    isLoading={loading}
                   >
                     Calculate Love
                   </Button>
@@ -143,7 +198,11 @@ const LoveCalculator = () => {
                     color={'tekArt.white'}
                     lineHeight='162.14%'
                     bg='tekArt.base'
-                    display={{base: 'none', lg: 'block'}}
+                    display={{base: 'none', lg: 'flex'}}
+                    onClick={handlePickRandom}
+                    isLoading={loading}
+                    alignItems='center'
+                    justifyContent='center'
                   >
                     Calculate
                   </Button>
@@ -229,27 +288,27 @@ const LoveCalculator = () => {
           mt='1.4rem'
           mx={{base: '2rem', lg: '3.2rem'}}
         >
-          <Button
-            boxSizing='border-box'
-            width={{base: '126px', lg: '293px'}}
-            height={{base: '35px', lg: '64px'}}
-            border='1px solid #FFFFFF'
-            borderRadius={{base: '7px', lg: '20px'}}
-            backgroundColor='transparent'
-            color='tekArt.white'
-            fontSize={{base: '11px', lg: '32px'}}
-            lineHeight='145.14%'
-            fontWeight='500'
-            fontFamily='Public Sans'
+          <a
+            href='https://eventprime.co/e/unofficial-prom'
+            target={'_blank'}
+            rel='noreferrer'
           >
-            <a
-              href='https://eventprime.co/e/unofficial-prom'
-              target={'_blank'}
-              rel='noreferrer'
+            <Button
+              boxSizing='border-box'
+              width={{base: '126px', lg: '293px'}}
+              height={{base: '35px', lg: '64px'}}
+              border='1px solid #FFFFFF'
+              borderRadius={{base: '7px', lg: '20px'}}
+              backgroundColor='transparent'
+              color='tekArt.white'
+              fontSize={{base: '11px', lg: '32px'}}
+              lineHeight='145.14%'
+              fontWeight='500'
+              fontFamily='Public Sans'
             >
               GET TICKETS
-            </a>
-          </Button>
+            </Button>
+          </a>
         </Flex>
       </Box>
       <Flex
@@ -297,12 +356,41 @@ const LoveCalculator = () => {
                 fontStyle='italic'
                 fontWeight={800}
               >
-                {text} &gt;
+                <a
+                  target={'_blank'}
+                  rel='noreferrer'
+                  href={
+                    i === 0
+                      ? 'https://tally.so/r/w2jyLV'
+                      : i === 1
+                      ? 'https://tally.so/r/3jeYLE'
+                      : 'https://tally.so/r/mVpyxy'
+                  }
+                >
+                  {text} &gt;
+                </a>
               </Text>{' '}
             </Text>
           </Box>
         ))}
       </Flex>
+      <Modal
+        isCentered
+        onClose={handleOkay}
+        isOpen={isOpen}
+        motionPreset='slideInBottom'
+        scrollBehavior='inside'
+      >
+        <ModalOverlay bg='tekArt.modalOverlay' />
+        <ModalContent justifyContent={'center'} alignItems={'center'} bg='none'>
+          <Score
+            random={random}
+            name1={name1}
+            name2={name2}
+            handleOkay={handleOkay}
+          />
+        </ModalContent>
+      </Modal>
     </Box>
   );
 };
