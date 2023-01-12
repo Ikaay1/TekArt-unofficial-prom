@@ -40,22 +40,22 @@ export const ticketsData = [
   {
     price: 'N4K',
     title: 'SINGLE FRECUENTE',
-    package: 'Event Access,Small Chops,Drinks',
+    package: 'Event Access,Item 7,Cocktail',
   },
   {
     price: 'N6.5K',
     title: 'SINGLE CALIDAD',
-    package: 'Event Access,Small Chops,Drinks,Food',
+    package: 'Event Access,Small Chops,Cocktail,Item 7',
   },
   {
     price: 'N7.9K',
     title: 'COUPLE FRECUENTE (2)',
-    package: 'Event Access,Small Chops,Drinks',
+    package: 'Event Access,Item 7,Cocktail',
   },
   {
     price: '13K',
     title: 'COUPLE CALIDAD',
-    package: 'Event Access,Small Chops,Drinks,Food,Sovenior',
+    package: 'Event Access,Small Chops,Item 7,Cocktail,Sovenior',
   },
 ];
 
