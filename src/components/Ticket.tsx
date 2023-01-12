@@ -100,10 +100,10 @@ const Ticket = () => {
                             lg: index === 1 ? '.3rem' : 0,
                           }}
                         >
-                          Event Access
+                          {item}
                         </Text>
                       ) : (
-                        <Text>Small Chops</Text>
+                        <Text>{item}</Text>
                       )}
                     </>
                   ))}
@@ -200,10 +200,10 @@ const Ticket = () => {
                             lg: index === 1 ? '.3rem' : 0,
                           }}
                         >
-                          Event Access
+                          {item}
                         </Text>
                       ) : (
-                        <Text>Small Chops</Text>
+                        <Text>{item}</Text>
                       )}
                     </>
                   ))}

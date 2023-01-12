@@ -58,3 +58,14 @@ export const ticketsData = [
     package: 'Event Access,Small Chops,Drinks,Food,Sovenior',
   },
 ];
+
+export const loveCalcQuotesData = [
+  'He saw that you were perfect, and so he loved you. Then he saw that you were not perfect and he loved you even more',
+  'For you both, love is that condition in which the happiness of another person is essential to your own.',
+  'For you guys, Love is a promise; it is a souvenir, once given never forgotten. Cheerio!!',
+  'For you both, the best thing to hold onto in life is each other.',
+  'He needs you like a heart needs a beat.',
+  'If she had a flower for every time she thought of you... she could walk through my garden forever.',
+  'Take her hand, take her whole life too. For she can’t help falling in love with you.',
+  'If you live to be a hundred, he want to live to be a hundred minus one day so he never have to live without you.',
+];

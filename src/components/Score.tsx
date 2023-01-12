@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Box, Button, Flex, Text } from '@chakra-ui/react';
 
+import { loveCalcQuotesData } from '../constants/data';
+
 const Score = ({
   handleOkay,
   name1,
@@ -76,8 +78,7 @@ const Score = ({
         mx='auto'
         my={{base: '.65rem', lg: '1.3rem'}}
       >
-        For you guys, Love is a promise; it is a souvenir, once given never
-        forgotten. Cheerio!!
+        {loveCalcQuotesData[Math.floor(Math.random() * 9 + 1 - 1)]}
       </Text>
       <Flex justifyContent={'center'}>
         <Button

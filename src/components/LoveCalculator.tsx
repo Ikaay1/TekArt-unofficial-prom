@@ -66,11 +66,11 @@ const LoveCalculator = () => {
         fontWeight='800'
         fontSize='20px'
         lineHeight='96.14%'
+        mr={{base: '.7rem'}}
         ml='auto'
         color='#FFFFFF'
         mb='1.45rem'
         display={{lg: 'none'}}
-        mx={{base: '.7rem', lg: '7rem'}}
       >
         LOVE CALCULATOR
       </Text>
@@ -243,7 +243,7 @@ const LoveCalculator = () => {
               mr={{base: '1.5rem', lg: '2.5rem'}}
               flexShrink={0}
             >
-              <Text
+              {/* <Text
                 fontFamily='Public Sans'
                 fontStyle='normal'
                 fontWeight='900'
@@ -252,7 +252,7 @@ const LoveCalculator = () => {
                 color='tekArt.white'
               >
                 &lt;
-              </Text>
+              </Text> */}
               <Text
                 width={{base: '295px', lg: '901px'}}
                 fontFamily='Playfair Display'
@@ -262,14 +262,14 @@ const LoveCalculator = () => {
                 lineHeight='145.14%'
                 color='tekArt.white'
                 textAlign={'center'}
-                mx='.5rem'
+                // mx='.5rem'
               >
                 ”{quote}”
                 <Text fontWeight={{base: '900', lg: '500'}} mt='.4rem'>
                   – {author}
                 </Text>
               </Text>
-              <Text
+              {/* <Text
                 fontFamily='Public Sans'
                 fontStyle='normal'
                 fontWeight='900'
@@ -278,7 +278,7 @@ const LoveCalculator = () => {
                 color='tekArt.white'
               >
                 &gt;
-              </Text>
+              </Text> */}
             </Flex>
           ))}
         </Flex>
