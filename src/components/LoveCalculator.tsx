@@ -37,10 +37,7 @@ const LoveCalculator = () => {
   const handlePickRandom = () => {
     if (name1 && name2) {
       setLoading(true);
-      const rand = Math.random() * 100;
-      console.log(rand); // say 99.81321410836433
-
-      setRandom(Math.floor(rand));
+      setRandom(Math.floor(Math.random() * (100 - 50 + 1)) + 50);
       setTimeout(() => {
         setLoading(false);
         onOpen();
