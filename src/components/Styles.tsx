@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
-import { Box, Flex, Image, Text } from '@chakra-ui/react';
+import {Box, Flex, Image, Text} from '@chakra-ui/react';
 
-import { imageUrls, timeData } from '../constants/data';
+import {imageUrls, timeData} from '../constants/data';
 
 // 2023-02-18T14:00:00+01:00
 const Styles = () => {
@@ -198,7 +198,7 @@ const Styles = () => {
           textAlign={'center'}
           mt={{base: '.8rem', lg: '1.2rem'}}
         >
-          17a, Commercial Avenue, Yaba Lagos
+          1A Hughes Ave, Yaba Lagos.
         </Text>
       </Box>
     </Box>
